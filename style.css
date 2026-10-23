@@ -1,0 +1,3435 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: #ffffff;
+    background:radial-gradient(circle at 100% 0%,rgba(0, 208, 255, 0.348),transparent 30%),
+               radial-gradient(circle at 0% 100%,rgba(0, 140, 255, 0.348),transparent 35%),
+               linear-gradient(135deg,#000000 0%,#000000 45%,#000000 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========================================================= 
+   ✨ LUXURY GOLD STAR FIELD 
+   ستاره‌های زیاد، ریز و متوسط + حرکت 
+   ========================================================= */ 
+ 
+body::before { 
+    content: ""; 
+    position: fixed; 
+    inset: -20px; 
+    pointer-events: none; 
+    z-index: 0; 
+    background-image: 
+        /* ⭐ ستاره‌های ریز */ 
+        radial-gradient( 
+            circle, 
+            rgba(55, 194, 212, 0.65) 0 1px, 
+            transparent 1.8px 
+        ), 
+
+        /* ✨ ستاره‌های متوسط */ 
+        radial-gradient( 
+            circle, 
+            rgba(110, 223, 245, 0.75) 0 1.4px, 
+            transparent 2.8px 
+        );  
+    background-size: 
+        47px 53px, 
+        113px 97px; 
+ 
+    background-position: 
+        0 0, 
+        23px 41px; 
+
+    opacity: 0.8; 
+ 
+    animation: 
+        starsFloat 14s ease-in-out infinite alternate; 
+} 
+ 
+/* ========================================================= 
+   ✨ لایه دوم ستاره‌های ریز 
+   ========================================================= */ 
+ 
+body::after {  
+    content: ""; 
+    position: fixed; 
+    inset: -20px; 
+    pointer-events: none; 
+    z-index: 0; 
+    background-image: 
+        /* ⭐ گرد و غبار طلایی */ 
+        radial-gradient( 
+            circle, 
+            rgba(55, 157, 212, 0.45) 0 0.7px, 
+            transparent 1.5px 
+        ), 
+ 
+        /* ✨ ستاره‌های کوچک */ 
+        radial-gradient( 
+            circle, 
+            rgba(110, 207, 245, 0.55) 0 1px, 
+            transparent 2px 
+        ); 
+ 
+    background-size: 
+        31px 37px, 
+        83px 71px; 
+ 
+    background-position: 
+        14px 9px, 
+        43px 27px; 
+ 
+    opacity: 0.65; 
+ 
+    animation: 
+        starDustMove 8s ease-in-out infinite alternate; 
+} 
+ 
+/* ========================================================= 
+   🌟 حرکت شناور ستاره‌های اصلی 
+   ========================================================= */ 
+ 
+@keyframes starsFloat { 
+ 
+    0% { 
+        opacity: 0.55; 
+ 
+        transform: 
+            translate3d(0, 0, 0) 
+            scale(1); 
+ 
+        background-position: 
+            0 0, 
+            23px 41px; 
+    } 
+ 
+    25% { 
+        opacity: 0.75; 
+ 
+        transform: 
+            translate3d(-0.3%, 0.2%, 0) 
+            scale(1.005); 
+ 
+        background-position: 
+            10px -8px, 
+            30px 34px; 
+    } 
+ 
+    50% { 
+        opacity: 0.95; 
+ 
+        transform: 
+            translate3d(0.2%, -0.3%, 0) 
+            scale(1.012); 
+ 
+        background-position: 
+            20px 4px, 
+            16px 48px; 
+    } 
+ 
+    75% { 
+        opacity: 0.7; 
+ 
+        transform: 
+            translate3d(0.4%, 0.1%, 0) 
+            scale(1.006); 
+ 
+        background-position: 
+            8px 12px, 
+            27px 36px; 
+    } 
+ 
+    100% { 
+        opacity: 0.85; 
+ 
+        transform: 
+            translate3d(-0.2%, -0.2%, 0) 
+            scale(1.01); 
+ 
+        background-position: 
+            0 0, 
+            23px 41px; 
+    } 
+} 
+ 
+/* ========================================================= 
+   ✨ حرکت و چشمک ستاره‌های ریز 
+   ========================================================= */ 
+ 
+@keyframes starDustMove { 
+ 
+    0% { 
+        opacity: 0.25; 
+ 
+        transform: 
+            translate3d(0, 0, 0) 
+            scale(1); 
+ 
+        background-position: 
+            14px 9px, 
+            43px 27px; 
+    } 
+ 
+    25% { 
+        opacity: 0.55; 
+ 
+        transform: 
+            translate3d(0.25%, -0.15%, 0) 
+            scale(1.005); 
+ 
+        background-position: 
+            5px 15px, 
+            50px 20px; 
+    } 
+ 
+    50% { 
+        opacity: 0.85; 
+ 
+        transform: 
+            translate3d(-0.2%, 0.25%, 0) 
+            scale(1.012); 
+ 
+        background-position: 
+            18px 2px, 
+            37px 34px; 
+    } 
+ 
+    75% { 
+        opacity: 0.45; 
+ 
+        transform: 
+            translate3d(0.15%, 0.1%, 0) 
+            scale(1.005); 
+ 
+        background-position: 
+            8px 11px, 
+            47px 24px; 
+    } 
+ 
+    100% { 
+        opacity: 0.7; 
+ 
+        transform: 
+            translate3d(-0.25%, -0.2%, 0) 
+            scale(1.01); 
+ 
+        background-position: 
+            14px 9px, 
+            43px 27px; 
+    } 
+} 
+ 
+/* ========================================================= 
+   ⭐ محتویات سایت بالای ستاره‌ها 
+   ========================================================= */ 
+ 
+body > * { 
+    position: relative; 
+    z-index: 1; 
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================================================
+   02. FONTS
+   ========================================================= */
+
+@font-face {
+    font-family:"OverlockSC";
+    src: url("fonts/OverlockSC-Regular.ttf");
+}
+
+@font-face {
+    font-family:"Aboreto";
+    src: url("fonts/Aboreto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Vazirmatn" ;
+    src: url("fonts/Vazirmatn-Regular.ttf");
+}
+
+/* =====================================================
+   UNIVERSE — CINEMATIC HEADER
+   ===================================================== */
+
+.header-site {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    padding: clamp(22px, 4vw, 48px) 0 28px;
+    isolation: isolate;
+}
+
+/* =====================================================
+   BRAND — FLOATING ABOVE THE PLANETS
+   ===================================================== */
+
+.header-brand {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: clamp(18px, 3vw, 34px);
+
+    animation: brandEntrance 1.2s ease-out both;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 10px 19px;
+    border: 1px solid rgba(100, 218, 255, 0.32);
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        rgba(9, 27, 49, 0.76),
+        rgba(2, 8, 20, 0.48)
+    );
+    box-shadow:
+        0 0 22px rgba(0, 183, 255, 0.09),
+        inset 0 0 18px rgba(74, 195, 255, 0.035);
+    backdrop-filter: blur(14px);
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.brand-link:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 196, 94, 0.75);
+    box-shadow:
+        0 0 28px rgba(0, 183, 255, 0.18),
+        0 0 35px rgba(255, 180, 65, 0.08);
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border: 1px solid rgba(255, 197, 100, 0.6);
+    border-radius: 13px;
+    color: #ffd27a;
+    font-size: 18px;
+    background: rgba(255, 188, 77, 0.07);
+    box-shadow:
+        0 0 16px rgba(255, 190, 80, 0.14),
+        inset 0 0 12px rgba(255, 190, 80, 0.08);
+    animation: satelliteFloat 3.5s ease-in-out infinite;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-family: "Aboreto", sans-serif;
+    font-size: clamp(21px, 2.5vw, 32px);
+    font-weight: 400;
+    letter-spacing: clamp(4px, 0.8vw, 9px);
+    text-shadow:
+        0 0 12px rgba(101, 220, 255, 0.5),
+        0 0 28px rgba(101, 220, 255, 0.15);
+}
+
+.brand-subtitle {
+    margin: 0;
+    color: rgba(165, 220, 245, 0.76);
+    font-family: "Aboreto", sans-serif;
+    font-size: clamp(8px, 0.85vw, 10px);
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    text-align: center;
+}
+
+/* =====================================================
+   PLANETARY STAGE
+   ===================================================== */
+
+.planetary-stage {
+    position: relative;
+    isolation: isolate;
+
+    width: min(100%, 1900px);
+    min-width: 0;
+    aspect-ratio: 3 / 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 0 clamp(12px, 3vw, 48px)
+             clamp(24px, 4.5vw, 65px);
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 5, 15, 0.02) 45%,
+            rgba(0, 5, 15, 0.2) 65%,
+            rgba(0, 5, 15, 0.94) 100%
+        ),
+        url("images/planets.png");
+
+    background-repeat: no-repeat;
+    background-position: 100% 100%, 68% center; /* عکس کمی به سمت راست */
+    background-size: 100% 100%, 88% auto;  
+
+    overflow: hidden;
+}
+
+/* Soft atmospheric glow */
+
+.stage-glow {
+    position: absolute;
+    z-index: -1;
+
+    left: 50%;
+    bottom: 8%;
+
+    width: 72%;
+    height: 35%;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(0, 151, 255, 0.14),
+        rgba(0, 72, 150, 0.05) 45%,
+        transparent 72%
+    );
+
+    filter: blur(24px);
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+/* =========================================
+   PLANETARY IMAGE — ROUNDED & POSITIONING
+   ========================================= */
+
+.planetary-stage {
+    border-radius: clamp(40px, 4vw, 80px);
+    overflow: hidden;
+    transform: translateY(clamp(-130px, -4.2vw, -130px));
+}
+
+/* =========================================
+   COSMIC CINEMATIC PLANETARY STAGE
+   ========================================= */
+
+.planetary-stage {
+    --stage-lift: -130px;
+    --stage-depth: 1200px;
+
+    position: relative;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    perspective: var(--stage-depth);
+
+    will-change: transform, filter;
+
+    animation: planetaryCinematicMotion 14s ease-in-out infinite;
+}
+
+/* =========================================
+   CINEMATIC LIGHT SWEEP
+   ========================================= */
+
+.planetary-stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    border-radius: inherit;
+    pointer-events: none;
+
+    background: linear-gradient(
+        112deg,
+        transparent 25%,
+        rgba(80, 218, 255, 0.02) 38%,
+        rgba(105, 229, 255, 0.19) 48%,
+        rgba(131, 190, 255, 0.07) 53%,
+        transparent 65%
+    );
+
+    background-size: 240% 100%;
+    background-position: 150% 50%;
+
+    mix-blend-mode: screen;
+
+    animation: planetaryLightSweep 9s ease-in-out infinite;
+}
+
+/* =========================================
+   DEEP-SPACE ATMOSPHERE
+   ========================================= */
+
+.planetary-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    border-radius: inherit;
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse at 50% 48%,
+        transparent 43%,
+        rgba(0, 15, 39, 0.08) 70%,
+        rgba(0, 7, 22, 0.48) 100%
+    );
+
+    box-shadow:
+        inset 0 0 45px rgba(0, 151, 255, 0.08),
+        inset 0 0 100px rgba(0, 9, 28, 0.22);
+
+    animation: planetaryAtmosphere 8s ease-in-out infinite;
+}
+
+/* =========================================
+   3D CINEMATIC MOTION
+   ========================================= */
+
+@keyframes planetaryCinematicMotion {
+    0%,
+    100% {
+        transform:
+            translateY(var(--stage-lift))
+            perspective(var(--stage-depth))
+            rotateX(0deg)
+            rotateY(-1deg)
+            scale(1);
+
+        filter: brightness(1) saturate(1);
+    }
+
+    25% {
+        transform:
+            translateY(calc(var(--stage-lift) - 5px))
+            perspective(var(--stage-depth))
+            rotateX(0.8deg)
+            rotateY(1deg)
+            scale(1.012);
+
+        filter: brightness(1.035) saturate(1.06);
+    }
+
+    50% {
+        transform:
+            translateY(calc(var(--stage-lift) - 2px))
+            perspective(var(--stage-depth))
+            rotateX(-0.5deg)
+            rotateY(1.5deg)
+            scale(1.018);
+
+        filter: brightness(1.07) saturate(1.1);
+    }
+
+    75% {
+        transform:
+            translateY(calc(var(--stage-lift) - 6px))
+            perspective(var(--stage-depth))
+            rotateX(0.5deg)
+            rotateY(-0.5deg)
+            scale(1.008);
+
+        filter: brightness(1.025) saturate(1.04);
+    }
+}
+
+/* =========================================
+   MOVING COSMIC LIGHT
+   ========================================= */
+
+@keyframes planetaryLightSweep {
+    0%,
+    15% {
+        background-position: 150% 50%;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.9;
+    }
+
+    55% {
+        background-position: -70% 50%;
+        opacity: 0.65;
+    }
+
+    70%,
+    100% {
+        background-position: -100% 50%;
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   ATMOSPHERIC GLOW PULSE
+   ========================================= */
+
+@keyframes planetaryAtmosphere {
+    0%,
+    100% {
+        box-shadow:
+            inset 0 0 35px rgba(0, 151, 255, 0.06),
+            inset 0 0 90px rgba(0, 9, 28, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            inset 0 0 55px rgba(0, 190, 255, 0.15),
+            inset 0 0 110px rgba(0, 9, 28, 0.12);
+    }
+}
+
+/* =========================================
+   COSMIC STARFIELD
+   ========================================= */
+
+.planetary-cosmic-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+
+    perspective: 700px;
+}
+
+.planetary-star {
+    position: absolute;
+
+    width: var(--star-size, 2px);
+    height: var(--star-size, 2px);
+
+    border-radius: 50%;
+    background: #d8f8ff;
+
+    box-shadow:
+        0 0 5px rgba(93, 219, 255, 0.9),
+        0 0 12px rgba(48, 171, 255, 0.45);
+
+    opacity: 0;
+
+    animation:
+        cosmicStarPulse
+        var(--star-duration, 4s)
+        ease-in-out
+        var(--star-delay, 0s)
+        infinite;
+}
+
+@keyframes cosmicStarPulse {
+    0%,
+    100% {
+        opacity: 0.08;
+        transform: translate3d(0, 5px, 0) scale(0.6);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: translate3d(0, -8px, 25px) scale(1.35);
+    }
+}
+
+/* =========================================
+   KEEP THE BUTTON ABOVE VISUAL EFFECTS
+   ========================================= */
+
+.planetary-stage .planetary-toggle-button {
+    z-index: 10;
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .planetary-stage,
+    .planetary-stage::before,
+    .planetary-stage::after,
+    .planetary-star {
+        animation: none !important;
+    }
+
+    .planetary-stage {
+        transform: translateY(var(--stage-lift));
+        filter: none;
+    }
+}
+
+
+/* =========================================
+   COSMIC HEADER — COLLAPSE / EXPAND
+   ========================================= */
+
+.header-site {
+    --cosmic-transition: 1s;
+}
+
+/* Smooth transition for the brand */
+
+.header-site .header-brand {
+    max-height: 0;
+    margin-block: 0;
+    padding-block: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    transform: translateY(-25px);
+
+    transition:
+        max-height var(--cosmic-transition) ease,
+        opacity 0.65s ease,
+        transform 0.8s ease,
+        visibility 0s linear 1s;
+}
+
+/* Smooth transition for the hero section */
+
+.header-site .hero-section {
+    max-height: 0;
+    min-height: 0;
+    margin-block: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    transform: translateY(35px);
+
+    transition:
+        max-height 1.2s ease,
+        opacity 0.8s ease,
+        transform 0.9s ease,
+        visibility 0s linear 1.2s;
+}
+
+/* Hide navigation until the header expands */
+
+.header-site .planet-nav,
+.header-site .stage-caption {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s ease,
+        visibility 0s linear 0.6s;
+}
+
+/* Keep the planetary image visible as the trigger */
+
+.header-site .planetary-stage {
+    position: relative;
+    z-index: 5;
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.8s ease;
+}
+
+
+/* =========================================
+   COSMIC ENTRY BUTTON — PREMIUM DESIGN
+   ========================================= */
+
+.planetary-toggle-button {
+    position: absolute;
+    z-index: 10;
+
+    left: 50%;
+    bottom: clamp(12px, 3vw, 35px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    width: max-content;
+    max-width: calc(100% - 28px);
+
+    padding: 13px 22px;
+
+    color: #f4fbff;
+    font-family: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 22, 43, 0.88),
+            rgba(0, 104, 151, 0.58),
+            rgba(9, 24, 49, 0.92)
+        );
+
+    border: 1px solid rgba(101, 226, 255, 0.55);
+    border-radius: 60px;
+
+    box-shadow:
+        0 0 12px rgba(0, 195, 255, 0.12),
+        0 0 28px rgba(0, 160, 255, 0.16),
+        inset 0 0 18px rgba(83, 215, 255, 0.07);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    cursor: pointer;
+    isolation: isolate;
+    overflow: hidden;
+
+    transform: translateX(-50%);
+    animation: cosmicEntryFloat 4s ease-in-out infinite;
+
+    transition:
+        background 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+/* Subtle moving light across the button */
+
+.planetary-toggle-button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: -50%;
+    left: -75%;
+
+    width: 45%;
+    height: 200%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(151, 240, 255, 0.16),
+        transparent
+    );
+
+    transform: rotate(22deg);
+    animation: cosmicLightSweep 5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+/* Soft outer glow */
+
+.planetary-toggle-button::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+
+    border-radius: inherit;
+    border: 1px solid rgba(91, 220, 255, 0.12);
+
+    box-shadow: 0 0 22px rgba(0, 191, 255, 0.12);
+
+    opacity: 0;
+    transition: opacity 0.45s ease;
+
+    pointer-events: none;
+}
+
+/* Rocket icon container */
+
+.toggle-button-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    color: #8cecff;
+    font-size: 19px;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(105, 230, 255, 0.22),
+            rgba(0, 115, 180, 0.08)
+        );
+
+    border: 1px solid rgba(113, 228, 255, 0.34);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 16px rgba(0, 193, 255, 0.12),
+        inset 0 0 10px rgba(113, 228, 255, 0.08);
+
+    transition:
+        transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Button typography */
+
+.toggle-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family:"Aboreto";
+    gap: 5px;
+}
+
+.toggle-title {
+    color: #f3fbff;
+    font-size: clamp(10px, 1vw, 13px);
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+    text-shadow: 0 0 12px rgba(104, 224, 255, 0.15);
+}
+
+.toggle-subtitle {
+    color: #9bd8ee;
+    font-family:"Aboreto";
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.7px;
+    white-space: nowrap;
+}
+
+/* Animated arrow */
+
+.toggle-button-arrow {
+    display: grid;
+    place-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    color: #ffc48c;
+    font-size: 13px;
+
+    border-radius: 50%;
+    background: rgba(90, 215, 255, 0.07);
+
+    transition:
+        transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        background 0.4s ease;
+}
+
+/* Smooth hover — no sudden movement */
+
+.planetary-toggle-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 47, 77, 0.96),
+            rgba(0, 130, 180, 0.72),
+            rgba(9, 31, 62, 0.96)
+        );
+
+    border-color: rgba(136, 239, 255, 0.9);
+
+    box-shadow:
+        0 0 18px rgba(0, 195, 255, 0.22),
+        0 0 42px rgba(0, 166, 255, 0.2),
+        inset 0 0 22px rgba(83, 215, 255, 0.1);
+}
+
+.planetary-toggle-button:hover::after {
+    opacity: 1;
+}
+
+.planetary-toggle-button:hover .toggle-button-icon {
+    color: #fdac7d;
+
+    transform: rotate(-12deg) scale(1.06);
+
+    box-shadow:
+        0 0 22px rgba(0, 205, 255, 0.25),
+        inset 0 0 12px rgba(113, 228, 255, 0.14);
+}
+
+.planetary-toggle-button:hover .toggle-button-arrow {
+    transform: translateY(3px);
+    background: rgba(90, 215, 255, 0.15);
+}
+
+/* Keyboard accessibility */
+
+.planetary-toggle-button:focus-visible {
+    outline: 2px solid #a4f0ff;
+    outline-offset: 5px;
+}
+
+/* Continuous, gentle floating motion */
+
+@keyframes cosmicEntryFloat {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -6px);
+    }
+}
+
+/* Slow cinematic light sweep */
+
+@keyframes cosmicLightSweep {
+    0%, 20% {
+        left: -75%;
+    }
+
+    65%, 100% {
+        left: 140%;
+    }
+}
+
+/* Responsive button */
+
+@media (max-width: 600px) {
+    .planetary-toggle-button {
+        gap: 9px;
+        padding: 10px 14px;
+        bottom: 12px;
+    }
+
+    .toggle-button-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .toggle-title {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+    }
+
+    .toggle-subtitle {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .toggle-button-arrow {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+}
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+    .planetary-toggle-button,
+    .planetary-toggle-button::before {
+        animation: none;
+    }
+
+    .planetary-toggle-button,
+    .planetary-toggle-button *,
+    .planetary-toggle-button::after {
+        transition: none;
+    }
+}
+
+
+/* =========================================
+   EXPANDED HEADER
+   ========================================= */
+
+.header-site.is-expanded .header-brand {
+    max-height: 300px;
+    padding-block: 10px;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    transition-delay: 0s;
+}
+
+.header-site.is-expanded .hero-section {
+    max-height: 1800px;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    transition-delay: 0s;
+}
+
+.header-site.is-expanded .planet-nav,
+.header-site.is-expanded .stage-caption {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+    transition-delay: 0.45s;
+}
+
+/* The planetary image becomes brighter */
+
+.header-site.is-expanded .planetary-stage {
+    filter: brightness(1.08);
+}
+
+/* Change the button's arrow when expanded */
+
+.header-site.is-expanded .toggle-button-arrow {
+    transform: rotate(180deg);
+}
+
+/* Button remains accessible above the expanded header */
+
+.header-site.is-expanded .planetary-toggle-button {
+    animation: none;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 600px) {
+    .planetary-toggle-button {
+        gap: 8px;
+        padding: 9px 13px;
+        bottom: 12px;
+    }
+
+    .toggle-button-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    .toggle-title {
+        font-size: 10px;
+        letter-spacing: 0.6px;
+    }
+
+    .toggle-subtitle {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .toggle-button-arrow {
+        font-size: 12px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .planetary-toggle-button {
+        animation: none;
+    }
+
+    .header-site *,
+    .header-site *::before,
+    .header-site *::after {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms;
+    }
+}
+
+
+
+/* =====================================================
+   NAVIGATION — INDEPENDENT PLANET WIDGETS
+   ===================================================== */
+
+.planet-nav {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: clamp(7px, 1.2vw, 18px);
+}
+
+/* Each link has its own border */
+
+.planet-link {
+    --planet-color: #77dfff;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    flex: 1 1 105px;
+    min-width: 0;
+    min-height: 49px;
+
+    padding: 12px clamp(9px, 1.2vw, 18px);
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--planet-color) 42%,
+        transparent
+    );
+
+    border-radius: 13px;
+
+    color: rgba(239, 249, 255, 0.9);
+
+    background: linear-gradient(
+        135deg,
+        rgba(4, 15, 31, 0.88),
+        rgba(4, 21, 38, 0.67)
+    );
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25),
+        inset 0 0 15px color-mix(
+            in srgb,
+            var(--planet-color) 5%,
+            transparent
+        );
+
+    backdrop-filter: blur(12px);
+
+    font-family: "Aboreto", sans-serif;
+    font-size: clamp(8px, 0.8vw, 11px);
+    letter-spacing: clamp(0.5px, 0.12vw, 1.5px);
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Colored light underneath each widget */
+
+.planet-link::after {
+    content: "";
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: 0;
+    height: 1px;
+    background: var(--planet-color);
+    box-shadow: 0 0 10px var(--planet-color);
+    opacity: 0.65;
+    transition:
+        left 0.35s ease,
+        right 0.35s ease,
+        opacity 0.35s ease;
+}
+
+/* Icon styling */
+
+.planet-link i {
+    flex-shrink: 0;
+    color: var(--planet-color);
+    font-size: clamp(13px, 1.1vw, 16px);
+    filter: drop-shadow(
+        0 0 7px color-mix(
+            in srgb,
+            var(--planet-color) 55%,
+            transparent
+        )
+    );
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+/* Hover interaction */
+
+.planet-link:hover {
+    z-index: 3;
+    color: #ffffff;
+    transform: translateY(-6px);
+    border-color: var(--planet-color);
+    background: color-mix(
+        in srgb,
+        var(--planet-color) 11%,
+        rgba(3, 13, 28, 0.94)
+    );
+
+    box-shadow:
+        0 0 22px color-mix(
+            in srgb,
+            var(--planet-color) 17%,
+            transparent
+        ),
+        0 12px 25px rgba(0, 0, 0, 0.25),
+        inset 0 0 18px color-mix(
+            in srgb,
+            var(--planet-color) 8%,
+            transparent
+        );
+}
+
+.planet-link:hover i {
+    transform: scale(1.2) rotate(-8deg);
+    filter: drop-shadow(
+        0 0 10px var(--planet-color)
+    );
+}
+
+.planet-link:hover::after {
+    left: 8%;
+    right: 8%;
+    opacity: 1;
+}
+
+/* Individual planet colors */
+
+.home-link {
+    --planet-color: #8cdfff;
+}
+
+.venus-link {
+    --planet-color: #ffc16b;
+}
+
+.earth-link {
+    --planet-color: #56d9ff;
+}
+
+.jupiter-link {
+    --planet-color: #ffae55;
+}
+
+.saturn-link {
+    --planet-color: #f2d19a;
+}
+
+.uranus-link {
+    --planet-color: #5be9ef;
+}
+
+.contact-link {
+    --planet-color: #c5a4ff;
+}
+
+/* =====================================================
+   STAGE CAPTION
+   ===================================================== */
+
+.stage-caption {
+    position: absolute;
+    left: 43%;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: rgba(125, 201, 230, 0.62);
+    font-family: "Aboreto", sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.caption-line {
+    display: block;
+    width: clamp(18px, 3vw, 42px);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(93, 209, 255, 0.7)
+    );
+}
+
+.caption-line:last-child {
+    transform: rotate(180deg);
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+@keyframes brandEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes satelliteFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-4px) rotate(4deg);
+    }
+}
+
+/* Keyboard accessibility */
+
+.planet-link:focus-visible,
+.brand-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   UNIVERSE — HERO SECTION
+   Cinematic Space Design
+   ========================================================= */
+
+/* ---------- Tokens ---------- */
+
+.hero-section {
+    --cyan:        #2bd0ff;
+    --cyan-soft:   rgba(43, 208, 255, 0.14);
+    --orange:      #ff9d3c;
+    --gold:        #ffd27a;
+    --text:        #f2f7ff;
+    --muted:       #ededed;
+    --ink:         #06101f;
+    --green:       #3dff9a;
+    --glass:       linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+    --shadow:      0 24px 50px -22px rgba(0, 0, 0, 0.85);
+    --font:        "Aboreto", "Vazirmatn", Tahoma, sans-serif;
+    --ease:        cubic-bezier(0.22, 1, 0.36, 1);
+    --gutter:      clamp(20px, 5vw, 72px);
+    --header-gap:  clamp(76px, 10vh, 112px);   /* space for the fixed header */
+    --dock:        92px;                        /* height of the stats dock   */
+    --dock-fade:   44px;                        /* soft fade above the dock   */
+}
+
+/* ---------- Shell ---------- */
+
+.hero-section {
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: calc(var(--header-gap) + 16px)
+             var(--gutter)
+             calc(var(--dock) + clamp(88px, 12vh, 120px));
+    font-family: var(--font);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-section ::selection {
+    background: var(--cyan);
+    color: var(--ink);
+}
+
+.hero-section .hero-planetary-rocket {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Two columns when there is room, one column when there is not */
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+    align-items: center;
+    gap: clamp(40px, 6vw, 88px);
+    width: min(100%, 1280px);
+}
+
+
+/* ---------- Background ---------- */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Fine dot texture, faded toward the scene */
+.hero-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.4px);
+    background-size: 38px 38px;
+    -webkit-mask: radial-gradient(ellipse 65% 60% at 72% 45%, #000, transparent 78%);
+            mask: radial-gradient(ellipse 65% 60% at 72% 45%, #000, transparent 78%);
+}
+
+/* Planet-horizon glow rising behind the stats dock */
+.hero-background::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 48%;
+    background: radial-gradient(ellipse 70% 100% at 50% 100%, rgba(43, 208, 255, 0.2), transparent 70%);
+}
+
+.hero-nebula {
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.6;
+    animation: hero-drift 20s ease-in-out infinite alternate;
+}
+
+.hero-nebula-one {
+    top: -20%;
+    right: -12%;
+    width: clamp(320px, 55vw, 780px);
+    background: radial-gradient(circle, rgba(43, 208, 255, 0.5), transparent 68%);
+}
+
+.hero-nebula-two {
+    bottom: -24%;
+    left: -14%;
+    width: clamp(300px, 48vw, 700px);
+    background: radial-gradient(circle, rgba(255, 157, 60, 0.34), transparent 68%);
+    animation-delay: -8s;
+    animation-direction: alternate-reverse;
+}
+
+/* Thin rotating arcs: a ring cut with a mask, faded with a conic gradient */
+.hero-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: -50% -50%;
+    -webkit-mask: radial-gradient(closest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1px));
+            mask: radial-gradient(closest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1px));
+}
+
+.hero-orbit-one {
+    width: clamp(760px, 150vw, 1560px);
+    background: conic-gradient(from 0deg, transparent 0 55%, rgba(43, 208, 255, 0.55), transparent);
+    animation: hero-spin 90s linear infinite;
+}
+
+.hero-orbit-two {
+    width: clamp(520px, 105vw, 1080px);
+    background: conic-gradient(from 180deg, transparent 0 60%, rgba(255, 157, 60, 0.45), transparent);
+    animation: hero-spin 130s linear infinite reverse;
+}
+
+/* Stars: six sparse layers with unrelated tile sizes so nothing visibly repeats */
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    opacity: 0.9;
+    background-image:
+        radial-gradient(1.4px 1.4px at 18% 24%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 72% 68%, #cfe8ff 50%, transparent 52%),
+        radial-gradient(1.8px 1.8px at 41% 11%, #fff 50%, transparent 52%),
+        radial-gradient(1px 1px at 88% 36%, #ffe6c2 50%, transparent 52%),
+        radial-gradient(1.2px 1.2px at 9% 83%, #cfe8ff 50%, transparent 52%),
+        radial-gradient(1.6px 1.6px at 57% 91%, #fff 50%, transparent 52%);
+    background-size: 331px 331px, 457px 457px, 613px 613px, 389px 389px, 521px 521px, 701px 701px;
+    animation: hero-twinkle 6s ease-in-out infinite alternate;
+}
+
+/* ---------- Content column ---------- */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 620px;
+}
+
+/* Staggered entrance */
+.hero-content > * {
+    animation: hero-rise 0.9s var(--ease) both;
+}
+.hero-content > :nth-child(2) { animation-delay: 0.09s; }
+.hero-content > :nth-child(3) { animation-delay: 0.18s; }
+.hero-content > :nth-child(4) { animation-delay: 0.27s; }
+.hero-content > :nth-child(5) { animation-delay: 0.36s; }
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+    padding: 9px 20px 9px 16px;
+    margin-bottom: clamp(18px, 3vh, 28px);
+    font-size: clamp(0.7rem, 0.62rem + 0.3vw, 0.82rem);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.16em;
+    color: var(--cyan);
+    background: var(--cyan-soft);
+    border-radius: 22px;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+}
+
+.hero-status-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: hero-ping 2.2s ease-out infinite;
+}
+
+.hero-title {
+    margin: 0 0 clamp(18px, 3vh, 28px);
+    font-size: clamp(2.3rem, 1.2rem + 4.8vw, 4.9rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.hero-title-highlight {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    background: linear-gradient(100deg, var(--gold), var(--orange) 50%, var(--cyan));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+    filter: drop-shadow(0 0 26px rgba(255, 157, 60, 0.32));
+}
+
+/* Persian paragraph: direction is picked from the text itself */
+.hero-description {
+    max-width: 58ch;
+    margin: 0 0 clamp(26px, 4vh, 40px);
+    font-family:"OverlockSC";
+    font-size: clamp(1.15rem, 1rem + 0.5vw, 1.35rem);
+    line-height: 2;
+    color: var(--muted);
+    unicode-bidi: plaintext;
+    text-align:left;
+}
+
+/* ---------- Buttons ---------- */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 22px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    transition: transform 0.4s var(--ease),
+                box-shadow 0.4s var(--ease),
+                background 0.4s var(--ease),
+                color 0.3s ease;
+}
+
+.hero-button i {
+    flex-shrink: 0;
+    transition: transform 0.4s var(--ease),
+                background 0.4s var(--ease),
+                color 0.3s ease;
+}
+
+.hero-button:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+}
+
+/* Solid call to action */
+.hero-button-primary {
+    padding: 17px 30px;
+    color: var(--ink);
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    border-radius: 14px;
+    box-shadow: 0 12px 30px -10px rgba(255, 157, 60, 0.7);
+}
+
+.hero-button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px -10px rgba(255, 157, 60, 0.9);
+}
+
+.hero-button-primary:hover i {
+    transform: translateX(5px);
+}
+
+/* Quiet secondary action: a round play badge + label, no box */
+.hero-button-secondary {
+    padding: 4px 6px 4px 4px;
+    color: var(--text);
+    border-radius: 999px;
+}
+
+.hero-button-secondary i {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    aspect-ratio: 1;
+    font-size: 1.15rem;
+    color: var(--cyan);
+    background: var(--glass);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+.hero-button-secondary:hover {
+    color: var(--cyan);
+}
+
+.hero-button-secondary:hover i {
+    color: var(--ink);
+    background: var(--cyan);
+    transform: scale(1.1);
+}
+
+/* ---------- Stats dock (full width, bottom of the section) ---------- */
+
+.hero-stats {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 28px);
+    box-sizing: border-box;
+    height: calc(var(--dock) + var(--dock-fade));
+    padding: var(--dock-fade) max(var(--gutter), calc((100% - 1280px) / 2)) 0;
+    background: linear-gradient(to top, rgba(2, 5, 14, 0.96), rgba(2, 5, 14, 0.6) 62%, transparent);
+}
+
+.hero-stat {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    text-align: center;
+}
+
+.hero-stat-number {
+    font-size: clamp(1.45rem, 1.1rem + 1.4vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--cyan);
+}
+
+.hero-stat-label {
+    font-size: clamp(0.58rem, 0.52rem + 0.25vw, 0.72rem);
+    line-height: 1.35;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.hero-stat-divider {
+    flex: 0 0 1px;
+    align-self: center;
+    height: 42px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.22), transparent);
+}
+
+/* ---------- Visual scene ---------- */
+
+.hero-visual {
+    min-width: 0;
+}
+
+.hero-planetary-scene {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 640px);
+    aspect-ratio: 1;
+    margin-inline: auto;
+}
+
+.hero-planetary-glow {
+    position: absolute;
+    inset: 6%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(43, 208, 255, 0.34), rgba(43, 208, 255, 0.06) 56%, transparent 72%);
+    filter: blur(26px);
+    animation: hero-breathe 6s ease-in-out infinite;
+}
+
+.hero-planetary-rocket {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 50%;
+    height: auto;
+    translate: -50% -50%;
+    filter: drop-shadow(0 26px 40px rgba(0, 0, 0, 0.55));
+    animation: hero-float 6.5s ease-in-out infinite;
+}
+
+/* Light bursts live in opposite corners, away from the rocket */
+.hero-planetary-first-glow,
+.hero-planetary-second-glow {
+    position: absolute;
+    height: auto;
+    mix-blend-mode: screen;
+    animation: hero-breathe 4.5s ease-in-out infinite;
+}
+
+.hero-planetary-first-glow {
+    top: 2%;
+    right: 2%;
+    z-index: 3;
+    width: 30%;
+}
+
+.hero-planetary-second-glow {
+    bottom: 5%;
+    right: -160;
+    z-index: 1;
+    width: 30%;
+    animation-delay: -2.2s;
+}
+
+/* Rings around the rocket: the ring is drawn by ::after (masked),
+   the glowing satellite by ::before, so the mask never hides the dot */
+.hero-visual-orbit {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hero-visual-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--ring);
+    -webkit-mask: radial-gradient(closest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1px));
+            mask: radial-gradient(closest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1px));
+}
+
+.hero-visual-orbit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    border-radius: 50%;
+    background: var(--dot);
+    box-shadow: 0 0 14px 3px var(--dot);
+}
+
+.hero-visual-orbit-one {
+    --ring: conic-gradient(from 0deg, rgba(43, 208, 255, 0.08), rgba(43, 208, 255, 0.55) 60%, rgba(43, 208, 255, 0.08));
+    --dot:  var(--orange);
+    inset: 3%;
+    animation: hero-spin 38s linear infinite;
+}
+
+.hero-visual-orbit-two {
+    --ring: conic-gradient(from 90deg, rgba(255, 157, 60, 0.08), rgba(255, 157, 60, 0.5) 60%, rgba(255, 157, 60, 0.08));
+    --dot:  var(--cyan);
+    inset: 17%;
+    animation: hero-spin 56s linear infinite reverse;
+}
+
+/* ---------- Mission card (lower-left of the scene, leaning toward the text) ---------- */
+
+.hero-info-card {
+    position: absolute;
+    left:auto;
+    right:0;
+    bottom: 9%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: max-content;
+    max-width: 100%;
+    padding: 12px 20px 12px 12px;
+    background: linear-gradient(160deg, rgba(20, 34, 60, 0.82), rgba(8, 16, 32, 0.82));
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(14px);
+    animation: hero-bob 7s ease-in-out infinite;
+}
+
+.hero-info-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: clamp(38px, 8vw, 46px);
+    aspect-ratio: 1;
+    font-size: 1.15rem;
+    color: var(--cyan);
+    background: var(--cyan-soft);
+    border-radius: 12px;
+}
+
+.hero-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.hero-info-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+}
+
+.hero-info-content strong {
+    font-size: clamp(0.8rem, 0.74rem + 0.25vw, 0.92rem);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.hero-info-indicator {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px 2px rgba(61, 255, 154, 0.7);
+    animation: hero-blink 1.8s ease-in-out infinite;
+}
+
+/* ---------- Scroll indicator (sits right above the dock) ---------- */
+
+.hero-scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--dock) + 14px);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    translate: -50% 0;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.3s ease;
+}
+
+.hero-scroll-indicator:hover,
+.hero-scroll-indicator:focus-visible {
+    color: var(--cyan);
+}
+
+.hero-scroll-indicator:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 6px;
+    border-radius: 8px;
+}
+
+.hero-scroll-text {
+    font-size: 0.66rem;
+    letter-spacing: 0.3em;
+    white-space: nowrap;
+}
+
+.hero-scroll-icon {
+    font-size: 1.1rem;
+    animation: hero-bounce 1.8s ease-in-out infinite;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes hero-spin    { to { rotate: 360deg; } }
+
+@keyframes hero-drift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to   { transform: translate3d(40px, 30px, 0) scale(1.12); }
+}
+
+@keyframes hero-twinkle { from { opacity: 0.4; } to { opacity: 1; } }
+
+@keyframes hero-rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-float {
+    0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+    50%      { transform: translateY(-16px) rotate(1.5deg); }
+}
+
+@keyframes hero-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-9px); }
+}
+
+@keyframes hero-breathe {
+    0%, 100% { opacity: 0.65; scale: 1; }
+    50%      { opacity: 1;    scale: 1.07; }
+}
+
+@keyframes hero-ping {
+    0%        { box-shadow: 0 0 0 0 rgba(43, 208, 255, 0.7); }
+    70%, 100% { box-shadow: 0 0 0 10px rgba(43, 208, 255, 0); }
+}
+
+@keyframes hero-blink  { 50% { opacity: 0.35; } }
+
+@keyframes hero-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(6px); }
+}
+
+
+/* =========================================================
+   HERO SECTION — LAYOUT CORRECTION
+   Preserve HTML • Full-width layout • No outer border
+   ========================================================= */
+
+/* 1. Let the hero occupy the full available width */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* 2. Keep content in a proper two-column layout */
+
+.hero-container {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    margin-inline: auto;
+    gap: clamp(32px, 5vw, 90px);
+}
+
+/* 3. Keep the text column aligned to the left */
+
+.hero-content {
+    width: 100%;
+    max-width: 680px;
+    min-width: 0;
+    justify-self: start;
+    align-items: flex-start;
+}
+
+/* 4. Keep the visual scene on the right */
+
+.hero-visual {
+    width: 100%;
+    min-width: 0;
+    justify-self: end;
+}
+
+.hero-planetary-scene {
+    width: min(100%, 640px);
+    margin-inline: auto;
+}
+
+/* 5. Prevent the headline and paragraph from overflowing */
+
+.hero-title {
+    max-width: 100%;
+    overflow-wrap: normal;
+}
+
+.hero-description {
+    width: 100%;
+    max-width: 58ch;
+}
+
+/* 6. Keep the stats dock across the entire hero */
+
+.hero-stats {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* ==========================================
+   SPACE MISSION — ROCKET LAUNCH INTERACTION
+   ========================================== */
+
+.hero-visual {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Clickable rocket */
+.hero-planetary-rocket {
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+    transition: filter 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hero-planetary-rocket:hover {
+    filter: drop-shadow(0 0 18px rgba(79, 210, 255, 0.55));
+}
+
+/* Keyboard accessibility */
+.hero-planetary-rocket:focus-visible {
+    outline: 2px solid #63e4ff;
+    outline-offset: 8px;
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   ROCKET POWER BUTTON
+   ========================================= */
+
+.rocket-power-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    width: clamp(42px, 4.5vw, 58px);
+    aspect-ratio: 1;
+    color: #ff5b5b;
+    font-size: clamp(17px, 1.7vw, 22px);
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(151, 53, 53, 0.75),
+            rgba(5, 19, 39, 0.96) 72%
+        );
+    border: 1px solid rgba(255, 87, 87, 0.75);
+    border-radius: 50%;
+    box-shadow:
+        0 0 12px rgba(43, 208, 255, 0.28),
+        0 0 28px rgba(43, 208, 255, 0.12),
+        inset 0 0 10px rgba(43, 208, 255, 0.12);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        scale 0.3s ease;
+}
+
+/* Hover glow */
+
+.rocket-power-button:hover {
+    color: #ffffff;
+    border-color: #a7f2ff;
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 115, 157, 0.95),
+            rgba(4, 22, 43, 0.98) 75%
+        );
+
+    box-shadow:
+        0 0 16px rgba(43, 208, 255, 0.55),
+        0 0 36px rgba(43, 208, 255, 0.25),
+        inset 0 0 12px rgba(43, 208, 255, 0.2);
+    scale: 1.08;
+}
+
+/* Click feedback */
+
+.rocket-power-button:active {
+    scale: 0.94;
+}
+
+/* Keyboard accessibility */
+
+.rocket-power-button:focus-visible {
+    outline: 2px solid #9cecff;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rocket-power-button {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   ENGINE FLAME
+   ========================================== */
+
+.rocket-engine-flame {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: calc(50% + clamp(48px, 8vw, 90px));
+    width: clamp(18px, 3.2vw, 36px);
+    height: clamp(45px, 7vw, 78px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) scaleY(0.15);
+    transform-origin: top center;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #a8f4ff 16%,
+        #35cfff 42%,
+        #477bff 72%,
+        transparent 100%
+    );
+    clip-path: polygon(
+        35% 0,
+        65% 0,
+        100% 38%,
+        72% 76%,
+        50% 100%,
+        28% 76%,
+        0 38%
+    );
+
+    filter: drop-shadow(0 0 12px #42cfff);
+}
+
+.rocket-engine-flame::before {
+    content: "";
+    position: absolute;
+    inset: 0 28% 20%;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #baf8ff 45%,
+        transparent
+    );
+
+    border-radius: 50%;
+}
+
+.rocket-engine-flame.is-active {
+    opacity: 1;
+    animation: engine-ignite 0.16s ease-in-out infinite alternate;
+}
+
+@keyframes engine-ignite {
+    from {
+        transform: translateX(-50%) scaleY(0.78) scaleX(0.88);
+        filter: drop-shadow(0 0 8px #42cfff);
+    }
+
+    to {
+        transform: translateX(-50%) scaleY(1.12) scaleX(1.08);
+        filter: drop-shadow(0 0 22px #42cfff);
+    }
+}
+
+/* ==========================================
+   ROCKET LAUNCH
+   ========================================== */
+
+.hero-planetary-rocket.is-launching {
+    animation: rocket-takeoff 2s cubic-bezier(0.42, 0, 0.9, 0.45) forwards !important;
+    pointer-events: none;
+}
+
+@keyframes rocket-takeoff {
+    0% {
+        transform: translate(-50%, -50%) translateY(0) scale(1) rotate(0);
+        opacity: 1;
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    12% {
+        transform: translate(-50%, -50%) translateY(8px) scale(0.98);
+        opacity: 1;
+    }
+
+    35% {
+        transform: translate(-50%, -50%) translateY(-12vh) scale(1.04);
+        opacity: 1;
+        filter: drop-shadow(0 0 18px rgba(70, 210, 255, 0.8));
+    }
+
+    70% {
+        transform: translate(-50%, -50%) translateY(-60vh) scale(0.8);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(-125vh) scale(0.48);
+        opacity: 0;
+    }
+}
+
+/* ==========================================
+   LAUNCH GLOW
+   ========================================== */
+
+.rocket-launch-glow {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: clamp(100px, 20vw, 240px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.2);
+    background: radial-gradient(
+        circle,
+        rgba(68, 210, 255, 0.3) 0%,
+        rgba(46, 119, 255, 0.12) 40%,
+        transparent 72%
+    );
+}
+
+.rocket-launch-glow.is-active {
+    animation: launch-glow 1.2s ease-out forwards;
+}
+
+@keyframes launch-glow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.1);
+    }
+}
+
+/* ==========================================
+   SPACE MISSION INFORMATION PANEL
+   ========================================== */
+
+.space-mission-panel {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: min(90%, 390px);
+    padding: clamp(18px, 3vw, 32px);
+    color: #edf9ff;
+    background: linear-gradient(
+        145deg,
+        rgba(12, 27, 55, 0.96),
+        rgba(5, 12, 30, 0.97)
+    );
+    border: 1px solid rgba(248, 150, 4, 0.79);
+    border-radius: 70px;
+    box-shadow:
+        0 0 50px rgba(41, 151, 255, 0.15),
+        inset 0 0 28px rgba(65, 174, 255, 0.045);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, calc(-50% + 24px)) scale(0.94);
+}
+
+.space-mission-panel.is-visible {
+    animation: mission-panel-open 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    pointer-events: auto;
+}
+
+@keyframes mission-panel-open {
+    from {
+        opacity: 0;
+        visibility: visible;
+        transform: translate(-50%, calc(-50% + 24px)) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.mission-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #65ddff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.mission-title {
+    margin: 0 0 12px;
+    background: linear-gradient(100deg,#ffc756,#65ddff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    line-height: 1.2;
+}
+
+.mission-description {
+    margin: 0 0 22px;
+    color: rgba(224, 239, 255, 0.99);
+    font-family:"OverlockSC";
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.mission-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mission-data-item {
+    padding: 14px;
+    background: rgba(92, 171, 255, 0.07);
+    border: 1px solid rgba(126, 198, 255, 0.12);
+    border-radius: 14px;
+}
+
+.mission-data-item span {
+    display: block;
+    margin-bottom: 7px;
+    color: #fefefe;
+    font-size: 0.76rem;
+}
+
+.mission-data-item strong {
+    color: #65ddff;
+    font-size: 0.95rem;
+}
+
+.mission-reset-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 18px;
+    color: #000000a3;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: linear-gradient(100deg, #ffd27a, #ff9d3c);
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mission-reset-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 200, 82, 0.24);
+}
+
+.mission-reset-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Small status label */
+.rocket-launch-status {
+    position: absolute;
+    z-index: 5;
+    top: calc(50% + clamp(100px, 14vw, 150px));
+    left: 50%;
+    width: max-content;
+    max-width: 90%;
+    padding: 8px 13px;
+    color: #8feaff;
+    background: rgba(4, 17, 38, 0.8);
+    border: 1px solid rgba(89, 213, 255, 0.22);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.rocket-launch-status.is-visible {
+    opacity: 1;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .rocket-engine-flame.is-active,
+    .rocket-launch-glow.is-active,
+    .space-mission-panel.is-visible {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+    }
+
+    .hero-planetary-rocket.is-launching {
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .space-mission-panel {
+         width: min(70%, 220px);
+         padding:10px;
+         border-radius:22px;
+    }
+
+   .mission-title {
+        font-size: 1.05rem
+    }
+
+    .mission-description {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .mission-data {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+
+    .mission-data-item {
+        padding: 7px;
+    }
+
+    .mission-reset-button {
+        min-height: 34px;
+        padding: 8px;
+        font-size: 0.72rem;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE HEADER
+   Tablet • Mobile • Small Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET — 768px to 1024px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ---------- Header & Brand ---------- */
+
+    .header-site {
+        padding: 28px 0 16px;
+    }
+
+    .header-brand {
+        gap: 7px;
+        margin-bottom: 20px;
+    }
+
+    .brand-link {
+        gap: 10px;
+        padding: 8px 15px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .brand-name {
+        font-size: clamp(19px, 3vw, 27px);
+        letter-spacing: 4px;
+    }
+
+    /* ---------- Planetary Stage ---------- */
+
+    .planetary-stage {
+        width: 94%;
+        aspect-ratio: 2 / 1;
+        padding: 0 20px 44px;
+        background-position: 100% 100%, center center;
+        background-size: 100% 100%, 100% auto;
+        border-radius: 30px;
+        transform: translateY(-30px);
+    }
+
+    /* ---------- Planet Navigation ---------- */
+
+    .planet-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .planet-link {
+        flex: 1 1 calc(25% - 9px);
+        min-width: 0;
+        min-height: 44px;
+        padding: 9px 7px;
+        gap: 6px;
+        font-size: 9px;
+        letter-spacing: 0.4px;
+    }
+
+    .planet-link i {
+        font-size: 13px;
+    }
+
+    .stage-caption {
+        bottom: 6px;
+        gap: 7px;
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    /* ---------- Hero Layout ---------- */
+
+    .hero-section {
+        display: block;
+        padding: 40px 32px calc(var(--dock) + 100px);
+    }
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 0.9fr);
+        width: 100%;
+        gap: 24px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(34px, 4.5vw, 48px);
+        line-height: 1.12;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .hero-actions {
+        gap: 12px;
+    }
+
+    .hero-button-primary {
+        padding: 14px 18px;
+        font-size: 12px;
+    }
+
+    .hero-planetary-scene {
+        width: 100%;
+    }
+
+    /* ---------- Mission Card ---------- */
+
+    .hero-info-card {
+        left: auto;
+        right: 0;
+        bottom: 7%;
+        gap: 9px;
+        max-width: 90%;
+        padding: 9px 12px;
+        border-radius: 14px;
+    }
+
+    .hero-info-label {
+        font-size: 9px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-info-content strong {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+
+    /* ---------- Stats ---------- */
+
+    .hero-stats {
+        gap: 12px;
+        padding-inline: 24px;
+    }
+
+    .hero-stat-label {
+        letter-spacing: 0.02em;
+    }
+}
+
+/* =========================================================
+   MOBILE — 481px to 767px
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .header-site {
+        width: 100%;
+        min-width: 0;
+        padding: 18px 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .header-site *,
+    .header-site *::before,
+    .header-site *::after {
+        box-sizing: border-box;
+    }
+
+    /* -------------------------------------------------
+       02. BRAND AND LOGO
+       ------------------------------------------------- */
+
+    .header-brand {
+        width: 100%;
+        max-width: 100%;
+        gap: 7px;
+        margin-bottom: 18px;
+    }
+
+    .brand-link {
+        max-width: 100%;
+        gap: 9px;
+        padding: 8px 12px;
+        border-radius: 14px;
+    }
+
+    .brand-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        font-size: 15px;
+    }
+
+    .brand-name {
+        font-size: clamp(17px, 5vw, 23px);
+        letter-spacing: clamp(2px, 0.7vw, 4px);
+    }
+
+    .brand-subtitle {
+        max-width: 100%;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    /* -------------------------------------------------
+       03. PLANETARY STAGE — FULL PLANET IMAGE
+       Keep the original background-image and effects
+       ------------------------------------------------- */
+
+    .planetary-stage {
+        --stage-lift: 0px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        aspect-ratio: 3 / 1;
+        padding: 0 8px 40px;
+        background-position:
+            center center,
+            center center;
+        background-size:
+            100% 100%,
+            contain;
+        background-repeat: no-repeat;
+        border-radius: clamp(18px, 5vw, 28px);
+        overflow: hidden;
+    }
+
+    /* Keep the image fully visible when the header opens */
+
+    .header-site.is-expanded .planetary-stage {
+        aspect-ratio: auto;
+        min-height: 225px;
+        padding: 18px 8px 58px;
+        background-position:
+            center center,
+            center center;
+        background-size:
+            100% 100%,
+            contain;
+    }
+
+    /* -------------------------------------------------
+       04. ATMOSPHERE AND CINEMATIC EFFECTS
+       ------------------------------------------------- */
+
+    .stage-glow {
+        width: 85%;
+        height: 30%;
+        bottom: 8%;
+        filter: blur(15px);
+    }
+
+    .planetary-stage::before,
+    .planetary-stage::after {
+        border-radius: inherit;
+    }
+
+    .planetary-cosmic-layer {
+        border-radius: inherit;
+    }
+
+    /* -------------------------------------------------
+       05. PLANET NAVIGATION
+       ------------------------------------------------- */
+
+    .planet-nav {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .planet-link {
+        flex: 1 1 calc(33.333% - 7px);
+        min-width: 0;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 8px 4px;
+        border-radius: 10px;
+        font-size: 8px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+    }
+
+    .planet-link i {
+        flex-shrink: 0;
+        font-size: 12px;
+    }
+
+    /* -------------------------------------------------
+       06. ENTRY BUTTON
+       ------------------------------------------------- */
+
+    .planetary-toggle-button {
+        left: 50%;
+        bottom: 7px;
+        width: max-content;
+        max-width: calc(100% - 16px);
+        gap: 7px;
+        padding: 8px 11px;
+        border-radius: 40px;
+    }
+
+    .toggle-button-icon {
+        width: 29px;
+        height: 29px;
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+    .toggle-button-text {
+        min-width: 0;
+        gap: 3px;
+    }
+
+    .toggle-title {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .toggle-subtitle {
+        font-size: 7px;
+        letter-spacing: 0.5px;
+    }
+
+    .toggle-button-arrow {
+        width: 21px;
+        height: 21px;
+        flex-shrink: 0;
+        font-size: 10px;
+    }
+
+    /* -------------------------------------------------
+       07. STAGE CAPTION
+       ------------------------------------------------- */
+
+    .stage-caption {
+        left: 50%;
+        bottom: 42px;
+        max-width: calc(100% - 16px);
+        gap: 6px;
+        font-size: 6px;
+        letter-spacing: 1px;
+        transform: translateX(-50%);
+    }
+
+    .caption-line {
+        width: 15px;
+        flex-shrink: 0;
+    }
+
+    /* -------------------------------------------------
+       08. EXPANDED HEADER
+       Preserve the original open/close behavior
+       ------------------------------------------------- */
+
+    .header-site.is-expanded .header-brand {
+        max-height: 300px;
+        margin-bottom: 14px;
+    }
+
+    .header-site.is-expanded .hero-section {
+        width: 100%;
+        max-height: 3000px;
+        min-height: 0;
+        margin-block: 0;
+    }
+
+    /* ---------- Hero Layout ---------- */
+
+    .hero-section {
+        display: block;
+        padding: 32px 22px calc(var(--dock) + 105px);
+    }
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 600px;
+        gap: 28px;
+        margin-inline: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 7vw, 50px);
+        line-height: 1.12;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+    .hero-actions {
+        gap: 12px;
+    }
+
+    .hero-button-primary {
+        padding: 14px 19px;
+        font-size: 12px;
+    }
+
+    .hero-button-secondary i {
+        width: 40px;
+    }
+
+    /* ---------- Rocket Scene ---------- */
+
+    .hero-visual {
+        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .hero-planetary-scene {
+        width: 100%;
+    }
+
+    /* ---------- Mission Card ---------- */
+
+    .hero-info-card {
+        left: auto;
+        right: 0;
+        bottom: 7%;
+        gap: 9px;
+        max-width: 88%;
+        padding: 9px 11px;
+        border-radius: 14px;
+    }
+
+    .hero-info-icon {
+        width: 36px;
+        font-size: 1rem;
+    }
+
+    .hero-info-label {
+        font-size: 9px;
+        letter-spacing: 0.05em;
+    }
+
+    .hero-info-content strong {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+
+    .hero-info-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* ---------- Stats ---------- */
+
+    .hero-stats {
+        height: calc(var(--dock) + 24px);
+        gap: 8px;
+        padding: 24px 16px 0;
+    }
+
+    .hero-stat-number {
+        font-size: clamp(19px, 4vw, 25px);
+    }
+
+    .hero-stat-label {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .hero-stat-divider {
+        height: 32px;
+    }
+
+    .hero-scroll-indicator {
+        bottom: calc(var(--dock) + 8px);
+    }
+
+    .hero-scroll-text {
+        font-size: 9px;
+        letter-spacing: 0.12em;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE — 480px and below
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .header-site {
+        padding: 14px 7px 16px;
+    }
+
+    /* Brand */
+
+    .brand-link {
+        gap: 7px;
+        padding: 7px 9px;
+    }
+
+    .brand-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .brand-name {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .brand-subtitle {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    /* Planet image */
+
+    .planetary-stage {
+        aspect-ratio: 3 / 1;
+        padding: 0 4px 36px;
+        background-position:
+            center center,
+            center center;
+        background-size:
+            100% 100%,
+            contain;
+        border-radius: 17px;
+    }
+
+    .header-site.is-expanded .planetary-stage {
+        min-height: 205px;
+        padding: 14px 4px 54px;
+        background-position:
+            center center,
+            center center;
+        background-size:
+            100% 100%,
+            contain;
+    }
+
+    /* Navigation */
+
+    .planet-nav {
+        gap: 5px;
+    }
+
+    .planet-link {
+        flex-basis: calc(33.333% - 5px);
+        min-height: 36px;
+        gap: 3px;
+        padding: 6px 2px;
+        font-size: 7px;
+        letter-spacing: 0;
+    }
+
+    .planet-link i {
+        font-size: 10px;
+    }
+
+    /* Entry button */
+
+    .planetary-toggle-button {
+        max-width: calc(100% - 12px);
+        gap: 5px;
+        padding: 7px 8px;
+    }
+
+    .toggle-button-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .toggle-title {
+        font-size: 8px;
+        letter-spacing: 0.2px;
+    }
+
+    .toggle-subtitle {
+        font-size: 6px;
+        letter-spacing: 0.3px;
+    }
+
+    .toggle-button-arrow {
+        width: 18px;
+        height: 18px;
+        font-size: 9px;
+    }
+
+    /* Caption */
+
+    .stage-caption {
+        bottom: 39px;
+        gap: 4px;
+        font-size: 5px;
+        letter-spacing: 0.7px;
+    }
+
+    .caption-line {
+        width: 11px;
+    }
+
+}
+
+/* =====================================================
+   10. REDUCED MOTION — ACCESSIBILITY
+   ===================================================== */
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+
+    .planetary-stage,
+    .planetary-stage::before,
+    .planetary-stage::after,
+    .planetary-star,
+    .planetary-toggle-button,
+    .planetary-toggle-button::before {
+        animation: none !important;
+    }
+
+    .planetary-stage {
+        transform: none;
+        filter: none;
+    }
+
+    /* ---------- Hero Layout ---------- */
+
+    .hero-section {
+        display: block;
+        padding: 26px 16px calc(var(--dock) + 110px);
+    }
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: 24px;
+        margin-inline: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-eyebrow {
+        gap: 8px;
+        padding: 7px 10px;
+        margin-bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 0.05em;
+    }
+
+    .hero-status-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .hero-title {
+        margin-bottom: 18px;
+        font-size: clamp(29px, 8.5vw, 39px);
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 22px;
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+    .hero-actions {
+        width: 100%;
+        gap: 9px;
+    }
+
+    .hero-button {
+        font-size: 10px;
+        letter-spacing: 0.02em;
+    }
+
+    .hero-button-primary {
+        padding: 12px 13px;
+        gap: 7px;
+        border-radius: 11px;
+    }
+
+    .hero-button-secondary {
+        gap: 7px;
+    }
+
+    .hero-button-secondary i {
+        width: 34px;
+        font-size: 13px;
+    }
+
+    /* ---------- Rocket Scene ---------- */
+
+    .hero-visual {
+        width: 100%;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .hero-planetary-scene {
+        width: 100%;
+    }
+
+    .hero-planetary-rocket {
+        width: 48%;
+    }
+
+    .hero-planetary-first-glow,
+    .hero-planetary-second-glow {
+        width: 27%;
+    }
+
+    .hero-planetary-second-glow {
+        right: -160;
+    }
+
+    /* ---------- Mission Card ---------- */
+
+    .hero-info-card {
+        left: auto;
+        right: 5px;
+        bottom: 6%;
+        gap: 6px;
+        max-width: 86%;
+        padding: 8px 9px;
+        border-radius: 12px;
+    }
+
+    .hero-info-icon {
+        width: 30px;
+        border-radius: 9px;
+        font-size: 13px;
+    }
+
+    .hero-info-content {
+        gap: 4px;
+    }
+
+    .hero-info-label {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .hero-info-content strong {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+
+    .hero-info-indicator {
+        width: 7px;
+        height: 7px;
+        margin-left: 0;
+    }
+
+    /* ---------- Stats ---------- */
+
+    .hero-stats {
+        height: calc(var(--dock) + 20px);
+        gap: 5px;
+        padding: 20px 10px 0;
+    }
+
+    .hero-stat {
+        gap: 5px;
+    }
+
+    .hero-stat-number {
+        font-size: clamp(16px, 5vw, 21px);
+    }
+
+    .hero-stat-label {
+        font-size: 8px;
+        letter-spacing: 0;
+        line-height: 1.4;
+    }
+
+    .hero-stat-divider {
+        height: 27px;
+    }
+
+    .hero-scroll-indicator {
+        bottom: calc(var(--dock) + 7px);
+        gap: 5px;
+    }
+
+    .hero-scroll-text {
+        font-size: 8px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-scroll-icon {
+        font-size: 14px;
+    }
+
+    /* ---------- Background Overflow ---------- */
+
+    .hero-nebula-one {
+        right: -30%;
+    }
+
+    .hero-nebula-two {
+        left: -30%;
+    }
+}
+
+
